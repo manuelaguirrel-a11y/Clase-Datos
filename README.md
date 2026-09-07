@@ -14,16 +14,13 @@ npx http-server -p 8080
 
 Then open `http://localhost:8080`.
 
-## Content to complete
+## Content notes
 
-A few items are placeholders and should be replaced with real content before publishing:
-
-- `assets/img/portrait-placeholder.svg` — swap for a professional photograph (update the
-  `<img>` in the hero section of `index.html`).
-- LinkedIn URL in the "Let's Connect" section (`index.html`, `.contact-linkedin`).
-- `assets/cv/Manuel-Aguirre-CV.pdf` — regenerate from `assets/cv/cv-source.html` if the CV
-  content changes (open the HTML file in a browser and print to PDF, or use a headless
-  browser to render it).
-- "Selected Projects" case studies — each project card is ready to hold a full
-  Problem / Approach / Analysis / Result / Key Takeaway write-up once real project files
-  are available.
+- `assets/cv/Manuel-Aguirre-CV.pdf` — the CV offered for download. Replace this file
+  directly if the CV is updated; there is no separate source template to regenerate.
+- `assets/img/manuel-portrait.jpg` — hero portrait, cropped from the supplied headshot.
+- `assets/img/swim-1.jpg`, `swim-2.jpg`, `swim-3.jpg` — photos used in the "Beyond the
+  Numbers" competitive swimming section.
+- "Selected Projects" case studies (Investment & Portfolio Analysis, Financial Modeling,
+  Data Analytics, Market & Investment Research) are not yet on the site — add a
+  dedicated section back in once real project files/results are ready to publish.
