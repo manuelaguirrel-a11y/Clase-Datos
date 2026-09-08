@@ -630,6 +630,26 @@ p{ margin: 0 0 1em; }
   padding: 30px 32px;
 }
 .beyond-card-single{ max-width: 560px; }
+
+.volunteer-gallery{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 760px;
+  margin-top: 28px;
+}
+.volunteer-gallery figure{ margin:0; }
+.volunteer-gallery img{
+  width:100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border: 1px solid var(--gray-300);
+}
+.volunteer-gallery figcaption{
+  font-size: .78rem;
+  color: var(--gray-500);
+  margin-top: 10px;
+}
 .beyond-card h3{ font-size: 1.1rem; margin-bottom: .8em; }
 .beyond-card ul li{
   font-size: .96rem;
@@ -732,6 +752,7 @@ p{ margin: 0 0 1em; }
   .skills-grid{ grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
   .principle-grid{ grid-template-columns: 1fr; gap: 22px; }
   .swim-gallery{ grid-template-columns: 1fr; }
+  .volunteer-gallery{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 760px){
