@@ -1,0 +1,691 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Reporte estadístico</title>
+<style>body{font-family:system-ui,sans-serif;max-width:1100px;margin:32px auto;padding:0 16px;color:#0b0b0b;background:#fcfcfb}
+h1{margin-bottom:4px} .sub{color:#52514e} table.t,table.v{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0 28px}
+td,th{border-bottom:1px solid #e4e3df;padding:6px 8px;text-align:left;vertical-align:top} th{background:#1F3A5F;color:#fff}
+code{background:#eef2f7;padding:1px 4px;border-radius:3px} img{max-width:100%;margin:8px 0 24px}</style></head><body>
+<h1>Reporte estadístico · Base final ENAPE 2021 (abandono escolar)</h1>
+<p class="sub">Manuel Aguirre · UDEM · Fuente: INEGI, ENAPE 2021. 32,343 registros (personas de 0-29 años) × 41 variables;
+representan 60.0 millones de personas. Estadísticos ponderados con el factor de expansión.</p>
+<h2>1. Perfil de variables</h2><table class="v"><tr><th>Variable</th><th>Tipo</th><th>No vacíos</th><th>% vacío</th><th>Resumen</th></tr>
+<tr><td><code>folio</code></td><td>str</td><td>32,343</td><td>0.0 %</td><td>14,456 valores únicos</td></tr><tr><td><code>renglon</code></td><td>str</td><td>32,343</td><td>0.0 %</td><td>13 valores únicos</td></tr><tr><td><code>factor</code></td><td>float64</td><td>32,343</td><td>0.0 %</td><td>3,881 valores únicos · suma 59,982,360</td></tr><tr><td><code>entidad</code></td><td>str</td><td>32,343</td><td>0.0 %</td><td>México: 12.9 % · Jalisco: 6.9 % · Ciudad de México: 5.8 % · Veracruz: 5.8 % · Puebla: 5.6 % · Guanajuato: 5.2 %</td></tr><tr><td><code>region</code></td><td>str</td><td>32,343</td><td>0.0 %</td><td>Centro: 29.3 % · Centro-Occidente: 24.6 % · Norte: 23.4 % · Sur-Sureste: 22.7 %</td></tr><tr><td><code>sexo</code></td><td>str</td><td>32,343</td><td>0.0 %</td><td>Hombre: 50.2 % · Mujer: 49.8 %</td></tr><tr><td><code>edad</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>media pond. 14.72 · mediana pond. 15 · d.e. 8.29 · mín 0 · máx 29</td></tr><tr><td><code>grupo_edad</code></td><td>str</td><td>32,343</td><td>0.0 %</td><td>23-29: 21.9 % · 6-11 (primaria): 21.1 % · 18-22 (superior): 18.7 % · 12-14 (secundaria): 10.7 % · 15-17 (media sup.): 10.3 % · 3-5: 9.6 %</td></tr><tr><td><code>informante_parentesco</code></td><td>str</td><td>32,343</td><td>0.0 %</td><td>Madre: 38.9 % · Padre: 17.3 % · La propia persona: 12.2 % · Hermano(a): 10.3 % · Abuelo(a): 8.2 % · Tío(a): 4.6 %</td></tr><tr><td><code>informante_padre_madre</code></td><td>str</td><td>32,343</td><td>0.0 %</td><td>Madre/padre: 56.2 % · Otro familiar o la persona: 43.8 %</td></tr><tr><td><code>tam_hogar</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>media pond. 5.62 · mediana pond. 5 · d.e. 2.77 · mín 1 · máx 20</td></tr><tr><td><code>tam_hogar_grupo</code></td><td>str</td><td>32,343</td><td>0.0 %</td><td>4-5 personas: 43.0 % · 6 o más: 40.4 % · 1-3 personas: 16.6 %</td></tr><tr><td><code>inscrito_2020_21</code></td><td>str</td><td>30,288</td><td>6.4 %</td><td>Sí: 55.3 % · No: 36.9 % · (vacío): 7.8 %</td></tr><tr><td><code>tipo_escuela_2020_21</code></td><td>str</td><td>20,064</td><td>38.0 %</td><td>Pública: 49.7 % · (vacío): 44.7 % · Privada: 5.6 %</td></tr><tr><td><code>nivel_2020_21</code></td><td>str</td><td>20,064</td><td>38.0 %</td><td>(vacío): 44.7 % · Primaria: 21.7 % · Secundaria: 10.1 % · Licenciatura: 7.4 % · Bachillerato general: 6.9 % · Preescolar: 6.9 %</td></tr><tr><td><code>nivel_agrupado_2020_21</code></td><td>str</td><td>20,064</td><td>38.0 %</td><td>(vacío): 44.7 % · Primaria: 21.7 % · Secundaria: 10.1 % · Media superior: 8.5 % · Superior: 7.9 % · Preescolar/inicial: 7.1 %</td></tr><tr><td><code>concluyo_2020_21</code></td><td>str</td><td>19,973</td><td>38.2 %</td><td>Sí: 54.0 % · (vacío): 45.0 % · No: 1.0 %</td></tr><tr><td><code>razon_no_concluyo_2020_21</code></td><td>str</td><td>388</td><td>98.8 %</td><td>(vacío): 99.0 % · Reprobó materias / bajo rendimiento: 0.2 % · Falta de dinero o recursos: 0.2 % · Pandemia COVID-19: 0.2 % · Falta de interés o aptitud: 0.2 % · Otra razón: 0.0 %</td></tr><tr><td><code>inscrito_2021_22</code></td><td>str</td><td>30,288</td><td>6.4 %</td><td>Sí: 55.0 % · No: 37.2 % · (vacío): 7.8 %</td></tr><tr><td><code>razon_no_inscripcion_2021_22</code></td><td>str</td><td>10,633</td><td>67.1 %</td><td>(vacío): 62.8 % · Logró su meta educativa: 7.8 % · Falta de dinero o recursos: 6.7 % · Falta de interés o aptitud: 6.1 % · Tenía que trabajar: 5.9 % · Se unió, casó o embarazo: 3.0 %</td></tr><tr><td><code>abandono_reciente</code></td><td>float64</td><td>18,207</td><td>43.7 %</td><td>(vacío): 50.1 % · 0.0: 46.4 % · 1.0: 3.5 %</td></tr><tr><td><code>asistio_alguna_vez</code></td><td>str</td><td>8,902</td><td>72.5 %</td><td>(vacío): 67.7 % · Sí: 29.2 % · No: 3.1 %</td></tr><tr><td><code>nivel_alcanzado</code></td><td>str</td><td>8,100</td><td>75.0 %</td><td>(vacío): 70.8 % · Bachillerato general: 8.8 % · Secundaria: 7.9 % · Licenciatura: 6.9 % · Primaria: 2.7 % · Bachillerato tecnológico: 1.7 %</td></tr><tr><td><code>edad_dejo_escuela</code></td><td>float64</td><td>7,885</td><td>75.6 %</td><td>media pond. 17.85 · mediana pond. 18 · d.e. 3.81 · mín 1 · máx 28</td></tr><tr><td><code>razon_dejo_escuela</code></td><td>str</td><td>8,100</td><td>75.0 %</td><td>(vacío): 70.8 % · Falta de dinero o recursos: 6.6 % · Falta de interés o aptitud: 6.1 % · Tenía que trabajar: 5.5 % · Terminó sus estudios / logró su meta: 4.8 % · Se unió, casó o embarazo: 3.3 %</td></tr><tr><td><code>abandono_historico</code></td><td>float64</td><td>8,095</td><td>75.0 %</td><td>(vacío): 70.8 % · 1.0: 24.4 % · 0.0: 4.8 %</td></tr><tr><td><code>piensa_retomar</code></td><td>str</td><td>9,831</td><td>69.6 %</td><td>(vacío): 65.9 % · No: 19.1 % · Sí: 9.8 % · No sabe: 5.3 %</td></tr><tr><td><code>condicion_actividad</code></td><td>str</td><td>18,114</td><td>44.0 %</td><td>(vacío): 45.7 % · Trabajó: 27.0 % · Estudia u otra situación: 23.4 % · Ayudó en negocio familiar o campo: 1.7 % · Buscó trabajo: 1.4 % · Vendió o elaboró productos: 0.5 %</td></tr><tr><td><code>trabaja</code></td><td>float64</td><td>18,114</td><td>44.0 %</td><td>(vacío): 45.7 % · 1.0: 29.5 % · 0.0: 24.8 %</td></tr><tr><td><code>escolaridad</code></td><td>str</td><td>30,288</td><td>6.4 %</td><td>Primaria: 24.6 % · Media superior: 20.0 % · Secundaria: 19.0 % · Superior: 14.6 % · (vacío): 7.8 % · Preescolar: 7.0 %</td></tr><tr><td><code>tic_computadora</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>0: 80.5 % · 1: 19.5 %</td></tr><tr><td><code>tic_laptop</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>0: 60.3 % · 1: 39.7 %</td></tr><tr><td><code>tic_tv</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>1: 76.9 % · 0: 23.1 %</td></tr><tr><td><code>tic_tablet</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>0: 79.1 % · 1: 20.9 %</td></tr><tr><td><code>tic_smartphone</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>1: 95.4 % · 0: 4.6 %</td></tr><tr><td><code>tic_internet</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>1: 68.8 % · 0: 31.2 %</td></tr><tr><td><code>indice_tic</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>media pond. 3.21 · mediana pond. 3 · d.e. 1.44 · mín 0 · máx 6</td></tr><tr><td><code>nse_tic</code></td><td>str</td><td>32,343</td><td>0.0 %</td><td>Medio (3-4): 46.9 % · Bajo (0-2 bienes): 33.4 % · Alto (5-6): 19.7 %</td></tr><tr><td><code>razon_sin_internet</code></td><td>str</td><td>9,262</td><td>71.4 %</td><td>(vacío): 68.8 % · Falta de dinero: 23.8 % · No hay servicio en la zona: 3.0 % · No le interesa / no lo necesita: 2.6 % · Tiene acceso en otro lugar: 0.8 % · Otra razón: 0.5 %</td></tr><tr><td><code>sin_internet_por_dinero</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>0: 76.2 % · 1: 23.8 %</td></tr><tr><td><code>sin_cobertura_internet</code></td><td>int64</td><td>32,343</td><td>0.0 %</td><td>0: 97.0 % · 1: 3.0 %</td></tr></table>
+<p class="sub">Los vacíos son estructurales: cada pregunta solo aplica a su subpoblación (p. ej. la razón de no inscripción solo a quien no se inscribió).</p>
+<h2>2. Indicador principal</h2><p>Tasa de abandono escolar 2020-21 → 2021-22 (6-29 años inscritos en 2020-21):
+<b>7.1 %</b> (IC 95 % 6.5–7.7), 2.12 millones de personas.</p>
+<h3>Por sexo</h3><table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tasa_%</th>
+      <th>ic_inf</th>
+      <th>ic_sup</th>
+      <th>casos_muestra</th>
+      <th>poblacion_millones</th>
+      <th>abandonos_millones</th>
+    </tr>
+    <tr>
+      <th>sexo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Hombre</th>
+      <td>7.24</td>
+      <td>6.44</td>
+      <td>8.05</td>
+      <td>9,329.00</td>
+      <td>14.89</td>
+      <td>1.08</td>
+    </tr>
+    <tr>
+      <th>Mujer</th>
+      <td>6.94</td>
+      <td>6.09</td>
+      <td>7.79</td>
+      <td>8,878.00</td>
+      <td>15.05</td>
+      <td>1.04</td>
+    </tr>
+  </tbody>
+</table><h3>Por nivel socioeconómico (proxy TIC)</h3><table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tasa_%</th>
+      <th>ic_inf</th>
+      <th>ic_sup</th>
+      <th>casos_muestra</th>
+      <th>poblacion_millones</th>
+      <th>abandonos_millones</th>
+    </tr>
+    <tr>
+      <th>nse_tic</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Bajo (0-2 bienes)</th>
+      <td>10.39</td>
+      <td>8.94</td>
+      <td>11.85</td>
+      <td>4,932.00</td>
+      <td>8.98</td>
+      <td>0.93</td>
+    </tr>
+    <tr>
+      <th>Medio (3-4)</th>
+      <td>6.57</td>
+      <td>5.80</td>
+      <td>7.35</td>
+      <td>8,821.00</td>
+      <td>14.16</td>
+      <td>0.93</td>
+    </tr>
+    <tr>
+      <th>Alto (5-6)</th>
+      <td>3.80</td>
+      <td>2.96</td>
+      <td>4.64</td>
+      <td>4,454.00</td>
+      <td>6.80</td>
+      <td>0.26</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Por nivel cursado × NSE (tasa %)</h3><table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th>nse_tic</th>
+      <th>Bajo (0-2 bienes)</th>
+      <th>Medio (3-4)</th>
+      <th>Alto (5-6)</th>
+    </tr>
+    <tr>
+      <th>nivel_agrupado_2020_21</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Primaria</th>
+      <td>3.80</td>
+      <td>1.40</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>Secundaria</th>
+      <td>15.40</td>
+      <td>6.70</td>
+      <td>1.60</td>
+    </tr>
+    <tr>
+      <th>Media superior</th>
+      <td>33.80</td>
+      <td>16.70</td>
+      <td>12.00</td>
+    </tr>
+    <tr>
+      <th>Superior</th>
+      <td>16.10</td>
+      <td>10.50</td>
+      <td>4.90</td>
+    </tr>
+  </tbody>
+</table><h3>Por región</h3><table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tasa_%</th>
+      <th>ic_inf</th>
+      <th>ic_sup</th>
+      <th>casos_muestra</th>
+      <th>poblacion_millones</th>
+      <th>abandonos_millones</th>
+    </tr>
+    <tr>
+      <th>region</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Centro</th>
+      <td>6.61</td>
+      <td>5.47</td>
+      <td>7.74</td>
+      <td>4,220.00</td>
+      <td>9.20</td>
+      <td>0.61</td>
+    </tr>
+    <tr>
+      <th>Norte</th>
+      <td>7.02</td>
+      <td>6.02</td>
+      <td>8.01</td>
+      <td>4,211.00</td>
+      <td>6.77</td>
+      <td>0.48</td>
+    </tr>
+    <tr>
+      <th>Centro-Occidente</th>
+      <td>7.17</td>
+      <td>5.84</td>
+      <td>8.51</td>
+      <td>4,820.00</td>
+      <td>7.14</td>
+      <td>0.51</td>
+    </tr>
+    <tr>
+      <th>Sur-Sureste</th>
+      <td>7.73</td>
+      <td>6.58</td>
+      <td>8.87</td>
+      <td>4,956.00</td>
+      <td>6.83</td>
+      <td>0.53</td>
+    </tr>
+  </tbody>
+</table>
+<h2>3. Descriptivos ponderados</h2><table class="dataframe t">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">media</th>
+      <th colspan="3" halign="left">mediana</th>
+      <th colspan="3" halign="left">desv_est</th>
+    </tr>
+    <tr>
+      <th>grupo</th>
+      <th>Total</th>
+      <th>Continuó</th>
+      <th>Abandonó</th>
+      <th>Total</th>
+      <th>Continuó</th>
+      <th>Abandonó</th>
+      <th>Total</th>
+      <th>Continuó</th>
+      <th>Abandonó</th>
+    </tr>
+    <tr>
+      <th>variable</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Edad (años)</th>
+      <td>13.32</td>
+      <td>13.03</td>
+      <td>17.13</td>
+      <td>13.00</td>
+      <td>12.00</td>
+      <td>18.00</td>
+      <td>5.00</td>
+      <td>4.96</td>
+      <td>3.78</td>
+    </tr>
+    <tr>
+      <th>Índice TIC del hogar (0-6)</th>
+      <td>3.34</td>
+      <td>3.38</td>
+      <td>2.84</td>
+      <td>3.00</td>
+      <td>3.00</td>
+      <td>3.00</td>
+      <td>1.45</td>
+      <td>1.44</td>
+      <td>1.41</td>
+    </tr>
+    <tr>
+      <th>Tamaño del hogar (personas)</th>
+      <td>5.58</td>
+      <td>5.55</td>
+      <td>5.93</td>
+      <td>5.00</td>
+      <td>5.00</td>
+      <td>5.00</td>
+      <td>2.51</td>
+      <td>2.48</td>
+      <td>2.87</td>
+    </tr>
+    <tr>
+      <th>Hogar con internet fijo (proporción)</th>
+      <td>0.72</td>
+      <td>0.73</td>
+      <td>0.57</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.45</td>
+      <td>0.44</td>
+      <td>0.49</td>
+    </tr>
+    <tr>
+      <th>Sin internet por falta de dinero (proporción)</th>
+      <td>0.22</td>
+      <td>0.21</td>
+      <td>0.34</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.42</td>
+      <td>0.41</td>
+      <td>0.47</td>
+    </tr>
+  </tbody>
+</table>
+<h2>4. Correlaciones ponderadas</h2><table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>abandono_reciente</th>
+      <th>indice_tic</th>
+      <th>edad</th>
+      <th>tam_hogar</th>
+      <th>tic_internet</th>
+      <th>sin_internet_por_dinero</th>
+      <th>sin_cobertura_internet</th>
+      <th>informante_es_padre</th>
+      <th>mujer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>abandono_reciente</th>
+      <td>1.00</td>
+      <td>-0.10</td>
+      <td>0.21</td>
+      <td>0.04</td>
+      <td>-0.09</td>
+      <td>0.08</td>
+      <td>0.02</td>
+      <td>-0.08</td>
+      <td>-0.01</td>
+    </tr>
+    <tr>
+      <th>indice_tic</th>
+      <td>-0.10</td>
+      <td>1.00</td>
+      <td>0.22</td>
+      <td>-0.17</td>
+      <td>0.73</td>
+      <td>-0.65</td>
+      <td>-0.19</td>
+      <td>-0.07</td>
+      <td>-0.00</td>
+    </tr>
+    <tr>
+      <th>edad</th>
+      <td>0.21</td>
+      <td>0.22</td>
+      <td>1.00</td>
+      <td>-0.15</td>
+      <td>0.18</td>
+      <td>-0.17</td>
+      <td>-0.05</td>
+      <td>-0.19</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>tam_hogar</th>
+      <td>0.04</td>
+      <td>-0.17</td>
+      <td>-0.15</td>
+      <td>1.00</td>
+      <td>-0.17</td>
+      <td>0.17</td>
+      <td>0.04</td>
+      <td>-0.18</td>
+      <td>0.04</td>
+    </tr>
+    <tr>
+      <th>tic_internet</th>
+      <td>-0.09</td>
+      <td>0.73</td>
+      <td>0.18</td>
+      <td>-0.17</td>
+      <td>1.00</td>
+      <td>-0.87</td>
+      <td>-0.27</td>
+      <td>-0.07</td>
+      <td>-0.01</td>
+    </tr>
+    <tr>
+      <th>sin_internet_por_dinero</th>
+      <td>0.08</td>
+      <td>-0.65</td>
+      <td>-0.17</td>
+      <td>0.17</td>
+      <td>-0.87</td>
+      <td>1.00</td>
+      <td>-0.09</td>
+      <td>0.08</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>sin_cobertura_internet</th>
+      <td>0.02</td>
+      <td>-0.19</td>
+      <td>-0.05</td>
+      <td>0.04</td>
+      <td>-0.27</td>
+      <td>-0.09</td>
+      <td>1.00</td>
+      <td>-0.01</td>
+      <td>-0.01</td>
+    </tr>
+    <tr>
+      <th>informante_es_padre</th>
+      <td>-0.08</td>
+      <td>-0.07</td>
+      <td>-0.19</td>
+      <td>-0.18</td>
+      <td>-0.07</td>
+      <td>0.08</td>
+      <td>-0.01</td>
+      <td>1.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>mujer</th>
+      <td>-0.01</td>
+      <td>-0.00</td>
+      <td>0.01</td>
+      <td>0.04</td>
+      <td>-0.01</td>
+      <td>0.01</td>
+      <td>-0.01</td>
+      <td>0.00</td>
+      <td>1.00</td>
+    </tr>
+  </tbody>
+</table>
+<h2>5. Modelo logístico ponderado</h2><table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coef</th>
+      <th>ee_robusto</th>
+      <th>odds_ratio</th>
+      <th>or_ic_inf</th>
+      <th>or_ic_sup</th>
+      <th>p_valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>const</th>
+      <td>-6.25</td>
+      <td>0.26</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>sexo_Mujer</th>
+      <td>-0.18</td>
+      <td>0.10</td>
+      <td>0.83</td>
+      <td>0.68</td>
+      <td>1.01</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <th>nse_tic_Bajo (0-2 bienes)</th>
+      <td>1.90</td>
+      <td>0.15</td>
+      <td>6.69</td>
+      <td>4.97</td>
+      <td>8.98</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>nse_tic_Medio (3-4)</th>
+      <td>0.78</td>
+      <td>0.13</td>
+      <td>2.17</td>
+      <td>1.67</td>
+      <td>2.83</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>region_Centro-Occidente</th>
+      <td>0.25</td>
+      <td>0.15</td>
+      <td>1.28</td>
+      <td>0.95</td>
+      <td>1.72</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>region_Norte</th>
+      <td>0.21</td>
+      <td>0.14</td>
+      <td>1.24</td>
+      <td>0.94</td>
+      <td>1.63</td>
+      <td>0.12</td>
+    </tr>
+    <tr>
+      <th>region_Sur-Sureste</th>
+      <td>0.20</td>
+      <td>0.14</td>
+      <td>1.22</td>
+      <td>0.93</td>
+      <td>1.61</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>grupo_edad_12-14 (secundaria)</th>
+      <td>1.27</td>
+      <td>0.24</td>
+      <td>3.56</td>
+      <td>2.22</td>
+      <td>5.71</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>grupo_edad_15-17 (media sup.)</th>
+      <td>2.79</td>
+      <td>0.22</td>
+      <td>16.19</td>
+      <td>10.56</td>
+      <td>24.82</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>grupo_edad_18-22 (superior)</th>
+      <td>3.62</td>
+      <td>0.22</td>
+      <td>37.24</td>
+      <td>24.41</td>
+      <td>56.82</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>grupo_edad_23-29</th>
+      <td>2.87</td>
+      <td>0.27</td>
+      <td>17.67</td>
+      <td>10.46</td>
+      <td>29.86</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>informante_padre_madre_Otro familiar o la persona</th>
+      <td>0.32</td>
+      <td>0.10</td>
+      <td>1.38</td>
+      <td>1.12</td>
+      <td>1.69</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>tam_hogar_grupo_1-3 personas</th>
+      <td>0.23</td>
+      <td>0.12</td>
+      <td>1.26</td>
+      <td>0.99</td>
+      <td>1.60</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <th>tam_hogar_grupo_6 o más</th>
+      <td>0.50</td>
+      <td>0.11</td>
+      <td>1.65</td>
+      <td>1.33</td>
+      <td>2.03</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>sin_cobertura_internet</th>
+      <td>0.01</td>
+      <td>0.26</td>
+      <td>1.00</td>
+      <td>0.61</td>
+      <td>1.66</td>
+      <td>0.98</td>
+    </tr>
+  </tbody>
+</table>
+<h2>6. Razones por sexo (% de quienes abandonaron)</h2><h3>Abandono reciente</h3><table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sexo</th>
+      <th>Hombre</th>
+      <th>Mujer</th>
+    </tr>
+    <tr>
+      <th>razon_no_inscripcion_2021_22</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Falta de dinero o recursos</th>
+      <td>29.00</td>
+      <td>29.20</td>
+    </tr>
+    <tr>
+      <th>Falta de interés o aptitud</th>
+      <td>21.20</td>
+      <td>15.70</td>
+    </tr>
+    <tr>
+      <th>Pandemia COVID-19</th>
+      <td>13.90</td>
+      <td>15.40</td>
+    </tr>
+    <tr>
+      <th>Otra razón</th>
+      <td>11.40</td>
+      <td>10.50</td>
+    </tr>
+    <tr>
+      <th>Tenía que trabajar</th>
+      <td>8.90</td>
+      <td>7.40</td>
+    </tr>
+    <tr>
+      <th>Problemas personales</th>
+      <td>4.00</td>
+      <td>5.00</td>
+    </tr>
+    <tr>
+      <th>No hay escuela cercana</th>
+      <td>3.90</td>
+      <td>4.70</td>
+    </tr>
+    <tr>
+      <th>Reprobó materias / bajo rendimiento</th>
+      <td>3.90</td>
+      <td>3.90</td>
+    </tr>
+  </tbody>
+</table><h3>Abandono histórico</h3><table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sexo</th>
+      <th>Hombre</th>
+      <th>Mujer</th>
+    </tr>
+    <tr>
+      <th>razon_dejo_escuela</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Falta de dinero o recursos</th>
+      <td>25.00</td>
+      <td>28.90</td>
+    </tr>
+    <tr>
+      <th>Falta de interés o aptitud</th>
+      <td>29.90</td>
+      <td>19.70</td>
+    </tr>
+    <tr>
+      <th>Tenía que trabajar</th>
+      <td>29.20</td>
+      <td>15.50</td>
+    </tr>
+    <tr>
+      <th>Se unió, casó o embarazo</th>
+      <td>6.10</td>
+      <td>21.60</td>
+    </tr>
+    <tr>
+      <th>Otra razón</th>
+      <td>1.70</td>
+      <td>2.40</td>
+    </tr>
+    <tr>
+      <th>Problemas personales</th>
+      <td>2.20</td>
+      <td>1.80</td>
+    </tr>
+    <tr>
+      <th>Quehaceres del hogar o cuidados</th>
+      <td>0.10</td>
+      <td>3.50</td>
+    </tr>
+    <tr>
+      <th>Reprobó materias / bajo rendimiento</th>
+      <td>1.70</td>
+      <td>1.00</td>
+    </tr>
+  </tbody>
+</table>
+<h2>7. Gráficas</h2><img src="graficas/00_matriz_correlaciones.png" alt="00_matriz_correlaciones"><img src="graficas/01_abandono_nse.png" alt="01_abandono_nse"><img src="graficas/02_heatmap_nivel_nse.png" alt="02_heatmap_nivel_nse"><img src="graficas/03_abandono_edad_sexo.png" alt="03_abandono_edad_sexo"><img src="graficas/04_abandono_entidad.png" alt="04_abandono_entidad"><img src="graficas/05_modelo_logit.png" alt="05_modelo_logit"><img src="graficas/06_razones_recientes_sexo.png" alt="06_razones_recientes_sexo"><img src="graficas/07_razones_historicas_sexo.png" alt="07_razones_historicas_sexo"><img src="graficas/08_dinero_trabajo.png" alt="08_dinero_trabajo">
+</body></html>
