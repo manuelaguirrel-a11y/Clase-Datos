@@ -2,7 +2,7 @@
 
 **Pregunta 12:** ¿Qué factores socioeconómicos (ingreso del hogar, escolaridad de los padres, zona) se asocian con el abandono escolar, y cuáles son las razones más frecuentes reportadas por sexo del estudiante?
 
-Autor: Manuel Aguirre · UDEM · Fuente: INEGI, ENAPE 2021 (datos abiertos oficiales).
+Autores: Manuel Eugenio Aguirre Leal (638219) y Manuel Alejandro Macías (632933) · UDEM · Fuente: INEGI, ENAPE 2021 (datos abiertos oficiales).
 
 ## Contenido de la carpeta
 
