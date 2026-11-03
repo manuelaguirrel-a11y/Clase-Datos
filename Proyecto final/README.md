@@ -15,7 +15,8 @@ Autores: Manuel Eugenio Aguirre Leal (638219) y Manuel Alejandro Macías (632933
 | `analisis_2.ipynb` | Código de estadísticas, patrones, modelo y visualizaciones |
 | `graficas/` | 9 gráficas en PNG |
 | `Reporte_Estadistico.html` | **Reporte estadístico** de la base final |
-| `Presentacion_Abandono_Escolar_ENAPE2021.pptx` | **Presentación** (8 diapositivas, gráficas editables y notas del orador) |
+| `Proyecto_Final_Mineria_de_Datos_Aguirre_Macias.pptx` | **Presentación** (8 diapositivas con notas del orador) |
+| `respaldo/Presentacion_version_original.pptx` | Versión anterior de la presentación (gráficas nativas editables) |
 
 ## Cómo correrlo en GitHub Codespaces
 
